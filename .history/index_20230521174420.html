@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FD notebook</title>
+  <!-- 解除其他平台的防盗链 -->
+  <meta name="referrer" content="never">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/_themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">  <!--Gitalk评论-->
+  <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">  <!--右侧目录js-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /><!--目录风格-->
+  <!-- alert -->
+  <link rel="stylesheet" href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+  <link rel="stylesheet"href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/><!--docsify-dark-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-accordion/src/style.css"><!--docsify-accordion插件(手风琴)-->
+  <!-- html preview demo-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.css"/>
+  <!-- 支持 LaTex 语言 -->
+  <link rel="stylesheet" href="https://notebook.js.org/plugin/css/katex.min.css" />
+  <link rel="stylesheet" href="https://wugenqiang.js.org/src/css/iconfont.css">
+  <link rel="stylesheet" href="https://notebook.js.org/plugin/custom.css">
+  <!-- 徽标 -->
+  <link rel="icon" href="/_media/logo.jpg">
+
+  《
+</head>
+<body>
+  <nav>
+    <a href="http://www.yangyuezz.top">个人博客</a>
+    <a href="https://github.com/FloatingDream1001">github</a>
+  </nav>
+  <div id="app">Loading...</div>
+  <a class="to-top">Top</a>
+  <script>
+    window.$docsify = {
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      repo: 'https://gitee.com/floatingdream1001/fdoc/tree/master/docsify',
+      name: 'FD notebook',
+      loadSidebar: true,   //开启目录，侧边栏
+      subMaxLevel: 2,        //对应显示文章几级标题
+      loadNavbar: true,     //顶部导航栏
+      coverpage: true,       //封面
+      onlyCover: true,      //封面和内容独立分开
+      auto2top: true,   //切换页面自动回到顶部
+      maxLevel: 4,      //可配置最大支持渲染的标题层级
+      search: {
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😒找不到结果',
+        depth: 4,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },
+      footer: {
+        copy: '<span id="sitetime"></span> <br> &copy 2023 🌞</span>',
+        auth: ' <strong>-FloatingDream-</strong>',
+        style: 'text-align: center;',
+      },
+      busuanzi: true,
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'OK!'
+      },
+      'flexible-alerts': { //文本高亮
+        style: 'flat'
+      },
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        isExpected: true
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: false,
+      },
+      toc: {
+        tocMaxLevel: 5,
+        target: 'h2, h3, h4, h5, h6',
+        ignoreHeaders:  ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
+      },
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
+      themeColor: "#42b983",
+      dark: {
+        background: "#1c2022",
+        toggleBtnBg: "white",
+        textColor: "blue"
+      },
+      light: {
+        background: "white",
+        toggleBtnBg: "black",
+        textColor: "black"
+      },
+      tabs: {
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      timeUpdater: {
+        text: "<div align='right' width='100%' style='color:gray;font-size:16px;margin-top:10px;'>最后更新时间: {docsify-updated}</div>",
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}",
+      },
+      docsifyBackTop: {
+        size: 32,           	// 数值，组件大小，默认值32。
+        bottom: 15,         	// 数值，组件底部偏移距离，默认值15。
+        right: 15,          	// 数值，组件右侧偏移距离，默认值15。
+        logo: 'top',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
+        bgColor: '#42b983'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
+      },
+      plantuml: {
+        skin: 'default'
+      },
+      remoteMarkdown: {
+        tag: 'rmd',
+      },
+      
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 一键复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 代码高亮 -->
+  <script src="https://notebook.js.org/plugin/prism-c.js"></script>
+  <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
+  <script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-css.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-docker.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-java.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-javascript.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-json.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-latex.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-sql.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-markdown.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-bash.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-php.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-scala.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-nginx.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-json.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-markdown.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-python.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- 文档页脚增强 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- 复制提醒 -->
+  <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script>
+    document.body.oncopy = function () { 
+      swal("嘿嘿 复制成功 🎉", 
+        "若要转载或引用请务必保留原文链接，并申明来源。谢谢支持！😊", 
+        "success"); };
+  </script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- emoji -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- gitalk -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'Github Application Client ID',
+      clientSecret: 'Github Application Client Secret',
+      repo: 'Github repo',
+      owner: 'Github repo owner',
+      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script> -->
+
+  <!-- 置顶插件 -->
+  <script src="style/jquery-1.11.3.min.js"></script>
+  <script src="style/jquery.toTop.min.js"></script>
+  <script>
+    $('.to-top').toTop();
+  </script>
+  <!-- 最近更新提示 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <!-- Markdown 引用样式美化 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
+  <!-- 离线缓存 -->
+  <!-- <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script> -->
+  <!-- Tab选项卡 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- 字数统计 -->
+  <script src="style/countable.js"></script>
+  <!-- 分章节按钮 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 右侧文章目录 -->
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
+  <!-- 侧边栏风格 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  <!-- docsify-dark -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+
+  <!-- 回到顶部 -->
+  <!-- <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script> -->
+
+  <!-- 回到顶部功能 -->
+  <script src="https://notebook.js.org/plugin/jquery.js"></script>
+  <script src="https://notebook.js.org/plugin/jquery.goup.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 32,
+        locationOffset: 35,
+        //title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+
+  <!-- plantuml -->
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  <!-- docsify-accordion插件(手风琴) -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-accordion/src/index.js"></script>
+  <!-- html preview demo-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.js"></script>
+  <!-- docsify-pangu 英文中文加空格-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+  <!-- remote-markdown 引入远程md文件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+  <!-- mouse click -->
+  <script src="https://notebook.js.org/plugin/click_heart.js"></script>
+  { <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <!-- 运行时间统计 -->
+  <script language=javascript>
+    function siteTime() {
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth() + 1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2023, 5, 20, 00, 00, 00); //北京时间2023-05-20 00:00:00
+      var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+      var diff = t2 - t1;
+      var diffYears = Math.floor(diff / years);
+      var diffDays = Math.floor((diff / days) - diffYears * 365);
+      var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+      var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+      var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+      if(diffYears==0){
+        document.getElementById("sitetime").innerHTML = " 本网站已运行 "  + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+      }
+      else{
+        document.getElementById("sitetime").innerHTML = " 本网站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+      };
+      
+    }
+    siteTime();
+  </script>}
+  <!-- 支持 LaTex 语言 -->
+  <script src="https://notebook.js.org/plugin/js/docsify-katex.js"></script>
+  <!-- 板娘 -->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+      "model": {
+        //jsonpath控制显示那个小萝莉模型，
+        //(切换模型需要改动)
+        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+        "scale": 1
+      },
+      "display": {
+        "position": "right", //看板娘的表现位置
+        "width": 70,  //小萝莉的宽度
+        "height": 140, //小萝莉的高度
+        "hOffset": 35,
+        "vOffset": -20
+      },
+      "mobile": {
+        "show": true,
+        "scale": 0.5
+      },
+      "react": {
+        "opacityDefault": 0.7,
+        "opacityOnHover": 0.2
+      }
+    });
+  </script>
+
+
+</body>
+</html>
