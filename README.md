@@ -4,7 +4,7 @@
  * @Autor: FloatingDream
  * @Date: 2023-03-28 23:39:03
  * @LastEditors: FloatingDream
- * @LastEditTime: 2023-06-20 19:31:59
+ * @LastEditTime: 2023-06-20 23:02:33
 -->
 
 <h1 style="text-align: center; font-weight: bold;">🎉欢迎光临FD notebook</h1>
@@ -19,7 +19,8 @@
 </h1>
 
 <h2 align="center">志在前方，何惧坎坷!</h2>
-> 本网站记录个人笔记.
+
+>本网站记录个人笔记.
 
 ### 我的联系方式
 
