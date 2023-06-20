@@ -9,23 +9,24 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/_themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">  <!--Gitalk评论-->
+  <link rel="stylesheet" href="//gcore.jsdelivr.net/npm/gitalk/dist/gitalk.css">  <!--Gitalk评论-->
   <link rel="stylesheet" type="text/css" href="style/myStyle.css"/>
   <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">  <!--右侧目录js-->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /><!--目录风格-->
+  <link rel="stylesheet" href="//gcore.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /><!--目录风格-->
   <!-- alert -->
-  <link rel="stylesheet" href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
-  <link rel="stylesheet"href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/><!--docsify-dark-->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-accordion/src/style.css"><!--docsify-accordion插件(手风琴)-->
+  <link rel="stylesheet" href="//gcore.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
+  <link rel="stylesheet"href="//gcore.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/><!--docsify-dark-->
+  <link rel="stylesheet" href="//gcore.jsdelivr.net/npm/docsify-accordion/src/style.css"><!--docsify-accordion插件(手风琴)-->
   <!-- html preview demo-->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.css"/>
+  <link rel="stylesheet" href="//gcore.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.css"/>
   <!-- 支持 LaTex 语言 -->
   <link rel="stylesheet" href="https://notebook.js.org/plugin/css/katex.min.css" />
   <link rel="stylesheet" href="https://wugenqiang.js.org/src/css/iconfont.css">
   <link rel="stylesheet" href="https://notebook.js.org/plugin/custom.css">
   <!-- 徽标 -->
   <link rel="icon" href="/_media/logo.jpg">
-
+  <!-- 自定义特色样式：by myself -->
+  <link rel="stylesheet" href="https://notebook.js.org/plugin/css/me.css">
   <style>
     /*代码块复制按钮默认隐藏*/
     .docsify-copy-code-button {
@@ -214,8 +215,29 @@
 </head>
 <body>
   <nav>
-    <a href="http://www.yangyuezz.top">个人博客</a>
-    <a href="https://github.com/FloatingDream1001">github</a>
+    <ul>
+      <li>
+        <a href="#">控制台导航</a>
+        <ul>
+          <li><a href="https://cn.aliyun.com/">阿里云</a></li>
+          <li><a href="https://tongji.baidu.com/">百度统计</a></li>
+          <li><a href="hhttps://vercel.com/login">Vercel</a></li>
+          <li><a href="https://dashboard.4everland.org/login">4EVERLAND</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">摸鱼🐟</a>
+        <ul>
+          <li><a href="http://slither.io/">0001</a></li>
+          <li><a href="https://www.yikm.net/">0002</a></li>
+          <li><a href="https://tophub.today/">0003</a></li>
+          <li><a href="https://www.mazegenerator.net/">0004</a></li>
+          <li><a href="https://lab.bangbang93.com/">0005</a></li>
+          <li><a href="https://suulnnka.github.io/BullshitGenerator/index.html?">0006</a></li>
+        </ul>
+      </li>
+    </ul>
+    
   </nav>
   <div id="app">🚴‍♂️🚴‍♂️🚴‍♂️💨Loading...</div>
   <a class="to-top">Top</a>
@@ -224,10 +246,10 @@
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
-      repo: 'https://gitee.com/floatingdream1001/fdoc/tree/master/docsify',
-      name: 'FD notebook',
+      repo: 'https://github.com/CodingZhi/CodingZhi.github.io',
+      name: '🌞FD notebook🌛',
       loadSidebar: true,   //开启目录，侧边栏
-      subMaxLevel: 2,        //对应显示文章几级标题
+      subMaxLevel: 1,        //对应显示文章几级标题
       loadNavbar: true,     //顶部导航栏
       coverpage: true,       //封面
       onlyCover: true,      //封面和内容独立分开
@@ -275,21 +297,35 @@
         target: 'h2, h3, h4, h5, h6',
         ignoreHeaders:  ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
       },
+      giscus:{
+        repo: "CodingZhi/docsify-note",
+        repoId: "R_kgDOJx0kkw",
+        category: "Announcements",
+        categoryId: "DIC_kwDOJx0kk84CXV3u",
+        mapping: "url",
+        reactionsEnabled: "0",
+        strict: "1",
+        emitMetadata: "0",
+        inputPosition: "bottom",
+        theme: "light",
+        lang: "zh-CN",
+        loading: "lazy"
+      },
       progress: {
         position: "top",
         color: "var(--theme-color,#42b983)",
         height: "3px",
       },
-      themeColor: "black",
+      themeColor: "var",
       dark: {
         background: "#1c2022",
         toggleBtnBg: "white",
-        textColor: "white"
+        textColor: "var"
       },
       light: {
         background: "#DCDCDC",
         toggleBtnBg: "#42b983",
-        textColor: "black"
+        textColor: "var"
       },
       tabs: {
         persist    : true,      // default
@@ -307,7 +343,7 @@
         bottom: 15,         	// 数值，组件底部偏移距离，默认值15。
         right: 15,          	// 数值，组件右侧偏移距离，默认值15。
         logo: 'top',				// logo:字符串或svg矢量图代码，默认为svg代码图标。
-        bgColor: 'black'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
+        bgColor: 'green'    	// 背景颜色，#fff、pink等，logo为svg图标时，不填。
       },
       plantuml: {
         skin: 'default'
@@ -322,7 +358,7 @@
         // other key in https://valine.js.org/configuration.html
       },
       contributors: {
-        repo: 'CodingZhi/CodingZhi',
+        repo: 'CodingZhi/CodingZhi.github.io',
         ignores: [],
         style: {
             color: '#ffffff',
@@ -342,17 +378,21 @@
   <!-- 文章贡献显示 -->
   <script src="//gcore.jsdelivr.net/npm/docsify-contributors@latest/dist/index.min.js"></script>
   <!-- mango-valine评论 -->
-  <script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
-  <script src="https://unpkg.com/docsify-mango-valine@1.1.1/dist/docsify-mango-valine.min.js"></script>
+  <!-- <script src='//gcore.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+  <script src="https://unpkg.com/docsify-mango-valine@1.1.1/dist/docsify-mango-valine.min.js"></script> -->
+
+  <!-- giscus评论  -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-giscus@1.0.2/dist/giscus.css">
+  <script src="https://unpkg.com/docsify-giscus@1.0.2/dist/docsify-giscus.min.js"></script>
   <!-- 百度统计 -->
   <script src="https://unpkg.com/docsify-baidu-tj@1.0.2/dist/docsify-baidu-tj.min.js"></script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <!-- 搜索插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 一键复制插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 代码高亮 -->
   <script src="https://notebook.js.org/plugin/prism-c.js"></script>
   <script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
@@ -375,11 +415,11 @@
   <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
   <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
   <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <!-- 文档页脚增强 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
   <!-- 复制提醒 -->
-  <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script src="https://gcore.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
   <script>
     document.body.oncopy = function () { 
       swal("嘿嘿 复制成功 🎉", 
@@ -387,9 +427,9 @@
         "success"); };
   </script>
   <!-- 图片缩放 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- emoji -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 
 
   <!-- 置顶插件 -->
@@ -399,9 +439,9 @@
     $('.to-top').toTop();
   </script>
   <!-- 最近更新提示 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- Markdown 引用样式美化 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
   <!-- 离线缓存 -->
   <!-- <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
@@ -409,7 +449,7 @@
     }
   </script> -->
   <!-- Tab选项卡 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://gcore.jsdelivr.net/npm/docsify-tabs@1"></script>
   <!-- 字数统计 -->
   <script src="style/countable.js"></script>
   <!-- 分章节按钮 -->
@@ -417,13 +457,12 @@
   <!-- 右侧文章目录 -->
   <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
   <!-- 侧边栏风格 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
   <!-- docsify-dark -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
 
-  <!-- 回到顶部 -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script> -->
+
 
   <!-- 回到顶部功能 -->
   <script src="https://notebook.js.org/plugin/jquery.js"></script>
@@ -443,13 +482,13 @@
   <!-- plantuml -->
   <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
   <!-- docsify-accordion插件(手风琴) -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-accordion/src/index.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-accordion/src/index.js"></script>
   <!-- html preview demo-->
-  <script src="//cdn.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-demo@latest/dist/index.min.js"></script>
   <!-- docsify-pangu 英文中文加空格-->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
   <!-- remote-markdown 引入远程md文件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+  <script src="//gcore.jsdelivr.net/npm/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
   <!-- mouse click -->
   <script src="https://notebook.js.org/plugin/click_heart.js"></script>
   <!-- 访问量统计 -->

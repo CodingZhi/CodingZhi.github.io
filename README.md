@@ -4,8 +4,9 @@
  * @Autor: FloatingDream
  * @Date: 2023-03-28 23:39:03
  * @LastEditors: FloatingDream
- * @LastEditTime: 2023-05-20 22:54:09
+ * @LastEditTime: 2023-06-20 19:31:59
 -->
+
 <h1 style="text-align: center; font-weight: bold;">🎉欢迎光临FD notebook</h1>
 
 <p>
@@ -20,13 +21,10 @@
 <h2 align="center">志在前方，何惧坎坷!</h2>
 > 本网站记录个人笔记.
 
-
-
-
 ### 我的联系方式
-| :pencil: | 🖥️ | 🐧 | 💌 |
-| --- | --- | --- | --- |
-| [Blogs](https://www.yangyuezz.top) |[CSDN](https://blog.csdn.net/m0_54228816?type=blog)  | [QQ](https://www.yangyuezz.top/img/QQ.jpg) | [Email](https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCHTrHzhRQxfVQlsLNVNjLKsjkSglwfmmzWmlXzvVgwQtgRrjMpVfMjBghJQRwvcjxXbQq) |
 
+| :pencil:                           | 🖥️                                                  | 🐧                                         | 💌                                                                                                                                   |
+| ---------------------------------- | --------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [Blogs](https://www.yangyuezz.top) | [CSDN](https://blog.csdn.net/m0_54228816?type=blog) | [QQ](https://www.yangyuezz.top/img/QQ.jpg) | [Email](https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCHTrHzhRQxfVQlsLNVNjLKsjkSglwfmmzWmlXzvVgwQtgRrjMpVfMjBghJQRwvcjxXbQq) |
 
 [>>操作指南](guide)
